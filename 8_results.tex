@@ -1,0 +1,38 @@
+%!TEX root = ./main.tex
+
+\section{Preliminary Results}
+
+This section presents preliminary results from several of the research aims for this thesis, addressing both design and verification considerations. In particular, I have completed the following projects, which are described in more detail in the rest of this section.
+
+\begin{enumerate}
+    \item \textit{Certifiable Robot Design Optimization using Differentiable Programming} (accepted to RSS 2022). This work develops a design optimization framework based on automatic differentiation, paired with a statistical robustness analysis that allows the designer to verify the expected worst-case performance and sensitivity of the design. Sections~\ref{ch8:sec:design} and~\ref{ch8:sec:statistical_checking} provide more detail on this work.
+
+    \item \textit{Robust Counterexample-guided Optimization for Planning from Differentiable Temporal Logic} (submitted to IROS 2022). This work explores the duality between design and verification through the lens of a two-player game, using automatic differentiation to find both locally optimal plans and adversarial counterxamples that guide further refinement of those plans. Sections~\ref{ch8:sec:adversarial} and~\ref{ch8:sec:game} provide more detail on this work.
+
+    \item \textit{Automatic Failure Mode Discovery and Mitigation using Differentiable Programming} (TODO(fall 2022)). This work combines local optimization using automatic differentiation with a stochastic global search and clustering mechanism to automatically identify qualitatively different failure modes of an autonomous system. This results in a greater diversity of adversarial counterexamples that can be used to guide further design optimization. Sections~\ref{ch8:sec:adversarial} and~\ref{ch8:sec:game} provide more detail on this work.
+\end{enumerate}
+
+These works represent a progressively sophisticated exploration of the duality between design and verification, as represented in context of the goals of this thesis in Figure~\ref{ch8:fig:progression}. In the first work, I use a simple random sample of environmental parameters to guide the design optimization (analogous to the use of simple domain randomization in reinforcement learning TODO(citation)). In the second work, I use local optimization (enabled by automatic differentiation) to find adversarial examples, which accumulate into a dataset that guides the design optimization. In the third work, I expand the search for counterexamples from local optimization (which tends to get trapped in a single failure mode) to discover multiple qualitatively different failure modes, which provide a richer dataset for robust design optimization.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{example-image-a}
+    \caption{TODO: explain progression between these three works, and how they fit into overall thesis goals.}
+    \label{ch8:fig:progression}
+\end{figure}
+
+\section{Glass-box design optimization}\label{ch8:sec:design}
+
+TODO
+
+\section{Glass-box adversarial testing}\label{ch8:sec:adversarial}
+
+TODO
+
+\section{Closing the design-verification loop}\label{ch8:sec:game}
+
+TODO
+
+\section{Statistical design verification}\label{ch8:sec:statistical_checking}
+
+TODO

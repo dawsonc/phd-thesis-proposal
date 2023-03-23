@@ -1,0 +1,92 @@
+%---------------------------------------------------------------------------%
+%								   Preamble									%
+%---------------------------------------------------------------------------%
+% declare document class, 12pt, lettersize and article 
+% could also be report, however section headers turn into chapters
+\documentclass[12pt, lettersize]{article}
+
+% import preamble.sty for packages
+% import refextdoc.sty for subfile crossreferencing
+% note the relative import. Because subfiles (e.g. abstract, introduction, etc.)
+% are located in separate files, for all files to be obtainable by main and subfiles,
+% need to tranverse up to the root directory (../) then back to the appropriate files in /main
+\usepackage{preamble}
+\usepackage{mymacros}
+
+% relative imports of images
+% note that graphics path should be encased in {}, ends with / to define directory, 
+% and finally separated by , without any lead or lag spaces.
+% therefore graphicsspath should look like \graphiscpath{{abc/},{xyz/},{123/}}
+% spaces in directory names are not recommended, however the the \usepackage[space]{grffile}
+% will attempt to work with directories with spaces
+\graphicspath{{./images/}}
+
+%---------------------------------------------------------------------------%
+%								Begin Document								%
+%---------------------------------------------------------------------------%
+\begin{document}
+
+%------------------
+% Table of Contents
+%------------------
+\include{0_titlepage}
+\newpage
+
+%------------------
+% Table of Contents
+%------------------
+\tableofcontents 
+% some thesis documents wil also want a table of contents for figures and tables
+% uncomment the commands below to create a table of contents for figures and tables
+%\listoffigures 
+%\listoftables
+ 
+\newpage
+ 
+% page numbering can be roman (e.g. i, ii, iii, iv), alpha (a, b, c, d)
+% or arabic (1,2,3,4). Change the below option to roman for front matter text
+% such as preface pages, alph for alpha lettering (e.g. Appendix maybe)
+% or arabic for standard page numbering. If you want to restart the page 
+% counter because you are using a new numbering format, you can use 
+% \setcounter{page}{X} where X is the new number you want to count on.
+\pagenumbering{arabic}
+
+\include{1_abstract}
+\include{2_introduction}
+\include{3_objectives}  % what do I want to do
+\include{4_literature_review}
+\include{5_contributions}  % why will this be important?
+\include{6_approach_design}
+\include{7_approach_test}
+\include{8_results}  % preliminary
+\include{9_planning}  % future work and project planning
+
+%---------------------------------------------------------------------------------------------%
+% Bibliography
+%---------------------------------------------------------------------------------------------%
+\newpage
+
+%-----------------------%
+% automatic bib entries %
+%-----------------------%
+% enter your bibliographies using a .bib file
+% for most formats, the unsrt argument (unsorted) will list the bibliographies as cited in the 
+% text, rather than sorting them alphabetically. For the \bibliography entries, much like the 
+% \graphicspath entries, each relative file directory is separated by a comma, no space,
+% followed by the .bib file name, without the .bib extension
+\bibliographystyle{unsrt} 
+\bibliography{bib_example}
+% example: \bibliography{../bib/bib_example,../bib/bib_example2,../bib/bib_example3}
+
+
+%---------------------------------------------------------------------------------------------%
+% Appendix
+%---------------------------------------------------------------------------------------------%
+\newpage
+\appendix
+\input{appendix}
+
+%---------------------------------------------------------------------------%
+%								 End Document								%
+%---------------------------------------------------------------------------%
+\end{document}
