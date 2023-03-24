@@ -4,12 +4,12 @@
 
 \subsection{Classes and Degree Milestones}
 
-Table~\ref{ch9:tab:course_requirements} shows my competed coursework, and Table~\ref{ch9:tab:degree_milestones} shows completed and anticipated degree milestones.
+Table~\ref{ch8:tab:course_requirements} shows my competed coursework, and Table~\ref{ch8:tab:degree_milestones} shows completed and anticipated degree milestones.
 
 \begin{table}[h]
 \centering
 \caption{My completed coursework, satisfying all academic requirements for the doctoral program. Major: autonomy. Minor: controls.}
-\label{ch9:tab:course_requirements}
+\label{ch8:tab:course_requirements}
 \begin{tabular}{llll}
 Semester    & Class                                             & Req.       & Status    \\ \hline
 Fall 2019   & 16.413 Principles of Autonomy \& Decision Making  & major      & completed \\
@@ -27,14 +27,13 @@ Fall 2021   & 16.995 Doctoral Research \& Communication Seminar & RPC        & c
 \begin{table}[h]
 \centering
 \caption{Milestones towards my completion of the doctoral degree. Italicized milestones are anticipated.}
-\label{ch9:tab:degree_milestones}
+\label{ch8:tab:degree_milestones}
 \begin{tabular}{rl}
 Fall 2019 (September)          & Began studies at MIT             \\
 Fall 2020 (December)           & Field evaluation complete        \\
 Spring 2021 (May)              & Masters thesis submitted         \\
-\textit{Fall 2022 (September)} & \textit{Committee meeting \#1}   \\
-\textit{Fall 2022 (December)}  & \textit{Thesis proposal defense} \\
-\textit{Spring 2023}           & \textit{Committee meeting \#2}   \\
+Fall 2022 (September)          & Committee meeting \#1   \\
+Summer 2023 (July)             & Commitee meeting \#2 and thesis proposal \\
 \textit{Fall 2023}             & \textit{Committee meeting \#3}   \\
 \textit{Spring 2024}           & \textit{Committee meeting \#4}   \\
 \textit{Spring 2024}           & \textit{Thesis defense}
@@ -65,25 +64,27 @@ Spring 2022
     \end{enumerate}
 \end{enumerate}
 
-Future work
-
-\textit{Fall 2022}
+Fall/Winter 2022
 \begin{enumerate}
     \item Improving design optimization and verification through automated failure mode discovery
     \begin{enumerate}
-        \item Add stochastic exploration to allow the verifier to find qualitatively different failure modes
+        \item Use differentiable programming and sequential MCMC to discover a diverse set of possible failure modes.
         \item Use counterexamples from all failure modes to guide robust design optimization
     \end{enumerate}
 \end{enumerate}
 
 \textit{Spring 2023}
 \begin{enumerate}
-    \item Exploit structure in program state traces to automatically generate test suite with coverage guarantees
+    \item Extend failure mode prediction and mitigation framework to challenging new problem domains, including:
+    \begin{enumerate}
+        \item Perception-in-the-loop controllers, through the use of differentiable rendering,
+        \item Deep neural network controllers.
+    \end{enumerate}
 \end{enumerate}
 
 \textit{Fall 2023}
 \begin{enumerate}
-    \item Extend automated failure mode discovery to design alternative discovery
+    \item Develop MCMC-based algorithm for safety verification and optimization of systems with discrete structure (e.g. involutive MCMC for robot manipulators with variaible morphologies).
     \item Write thesis
 \end{enumerate}
 

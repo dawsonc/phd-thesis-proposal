@@ -1,10 +1,90 @@
 %!TEX root = ./main.tex
 
-\section{Literature Review}
-Background \& Significance section should be \textbf{3-5 pages}.
+\section{Background and Significance}
 
-Sketch the background leading to the present research, critically evaluate existing knowledge, and
-specifically identify the gaps that your research is intended to fill. State concisely the importance of the
-research described in this proposal by relating the specific aims to the broad, long-term objectives.
+% Provide a high-level overview of the literature this work aims to build on.
 
-% ADD YOUR TEXT HERE!!!!
+My thesis aims to build on prior work in three distinct but related areas: differentiable and probabilistic programming, 
+safety verification (both model-based and black-box), and robust and adversarial optimization. This section will review each of these fields with an eye towards framing the significance of my planned thesis contributions.
+
+\subsection{Programs as mathematical models}
+
+% Motivation: mathematical models are hard to come by
+
+% Program analysis allows us to extract and exploit the structure in computer programs.
+
+\subsubsection{Differentiable programming}
+
+% History and objectives
+
+% Examples of applications
+
+% Explain forward and reverse mode differentiation, and briefly explain the math in each case
+
+% Explain SoTA, limitations, known pathologies, and advantages/drawbacks relative to other gradient-estimation techniques.
+
+\subsubsection{Probabilistic programming}
+
+% History and objectives
+
+% Examples of applications
+
+% Overview of the theory and math
+
+% Explain SoTA, advantages and limitations.
+
+\subsection{Safety verification}
+
+% general motivation, high-level problem statement.
+
+% Split on model-based/model-free, segue
+
+\subsubsection{Model-based safety verification}
+
+% Historical context
+
+% Logical models: sat, extension to SMT
+
+% Dynamical systems: reachability, HJB, certificates
+
+% limitations on complexity of model; segue
+
+\subsubsection{Black-box safety verification}
+
+% Motivation, historical context
+
+% Black-box optimization
+
+% RL
+
+% Black-box inference methods
+
+% Limitations of black-box inference
+
+\subsection{Robust and adversarial optimization}
+
+% Motivation: once we have safety violations, how can we use them to improve the system?
+
+% adversarial training
+
+% limitation: has only been explored for simple models or static tasks (e.g image classification)
+
+\subsection{Significance of planned contributions}
+
+% Setup contributions in two fronts
+
+\subsubsection{Programs-as-models: a middle-ground between model-free and model-based}
+
+% Recap limitations of model-based and model-free
+
+% Introduce differentiable simulation as a middle-ground.
+
+% Foreshadow claimed results: my methods are faster than model-free and yield higher-quality solutions, but more scalable than model-based.
+
+\subsubsection{Dynamic adversarial optimization}
+
+% Only considering static tasks is not sufficient for autonomous system verification.
+
+% existing methods for dynamical systems are typically local and can be over-confident as a result.
+
+% Existing optimization methods also struggle to handle multi-modal or discrete choices.

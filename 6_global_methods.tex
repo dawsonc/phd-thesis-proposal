@@ -1,0 +1,61 @@
+%!TEX root = ./main.tex
+
+\section{Global methods for design and verification}\label{section:global_methods}
+
+% Motivate this section by framing the limitations of local methods in the context of an engineer exploring the design space.
+
+% Introduce the capabilities that we want to provide for an engineer: predicting the different ways in which an autonomous system might fail
+
+% Once we have the failure modes, updating the design to mitigate those failure modes.
+
+% Provide a motivating example - SCOPF (others?)
+
+\subsection{From optimization to inference}
+
+% Introduce optimization-via-inference perspective for a general optimization problem.
+
+% Briefly introduce why sampling is hard and how MCMC can be used to sample from these challenging distributions
+
+% Provide a simple demonstration for a bi-modal system with plots
+
+\subsubsection{Gradient-accelerated automated inference}
+
+% Address concern: sampling methods have been around for a while and used a bunch in robotics (IS, ROCUS, etc.). We improve by using differentiable simulation.
+
+% Provide a simple demonstration on the ballistic example. Scale the dimension up a bunch to show that gradient-based MCMC dominates in high dimensions.
+
+\subsection{Sampling diverse failure modes}
+
+% Introduce risk-adjusted severity framework (follow RSS paper)
+
+% Introduce MALA algorithm for sampling failure modes
+
+% Theoretical comments
+
+\subsubsection{Case study: predicting transmission outages in electrical power networks}
+
+% Problem setup
+
+% Research questions relevant to state of the art.
+
+% Results
+
+% How do our results compare to the state of the art?
+
+\subsection{Repairing failure modes}
+
+% Motivation: how to close the design-verification feedback loop.
+
+% Convert min-max optimization from previous section to inference problem.
+
+% Introduce sequential MCMC algorithm for solving this problem.
+
+\subsubsection{Case study: robust generation dispatch for secure power networks}
+
+% Problem setup
+
+% Research questions relevant to state of the art.
+
+% Results
+
+% How do our results compare to the state of the art? - Highlight overconfidence of gradient-only methods and poor solution quality of gradient-free methods.
