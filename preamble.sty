@@ -28,6 +28,8 @@
 \usepackage{longtable}		% tables extend multiple pages \begin{longtable}{}
 \usepackage{ltablex}		% provides tabularx, page breaking capabilities
 \usepackage{rotating}		% sideways and rotate package
+\usepackage{bbm}  % for indicator function
+\usepackage{soul}  % for underline
 
 %--------------%
 % bibliography %
@@ -55,7 +57,7 @@
 \usepackage{enumitem}		% enumerate referenced items
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 % \usepackage{algorithmic}
-\usepackage{algorithm}
+\usepackage[linesnumbered,ruled,vlined,resetcount,algosection]{algorithm2e}
 \usepackage{algpseudocode}
 
 %---------------%
@@ -81,7 +83,7 @@
 
 %% Figure and Table Caption Headers
 % declare a | seperator
-\DeclareCaptionLabelSeparator{vert}{ \bf{\textbar} } 
+\DeclareCaptionLabelSeparator{vert}{ \bf{\textbar} }
 % for figure captions
 \usepackage[labelfont=bf,labelsep=vert, font=small]{caption}	% 10 pt font		
 
@@ -118,6 +120,11 @@
 %  \endgroup
 %}
 
+%% Algorithm keywords
+\SetKwInput{KwInput}{Input}                % Set the Input
+\SetKwInput{KwOutput}{Output}              % set the Output
+\SetKw{Break}{break}
+
 \captionsetup{font=footnotesize}
 
 %---------%
@@ -131,7 +138,7 @@
 \numberwithin{table}{section}
 \numberwithin{figure}{section}
 \numberwithin{equation}{section}
-\numberwithin{algorithm}{section}
+% \numberwithin{algorithm}{section}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[section]

@@ -1,85 +1,83 @@
 %!TEX root = ./main.tex
 
-\section{Milestones and Program Logistics}
+\section{Milestones and Program Logistics}\label{section:planning}
 
 \subsection{Classes and Degree Milestones}
 
 Table~\ref{ch8:tab:course_requirements} shows my competed coursework, and Table~\ref{ch8:tab:degree_milestones} shows completed and anticipated degree milestones.
 
 \begin{table}[h]
-\centering
-\caption{My completed coursework, satisfying all academic requirements for the doctoral program. Major: autonomy. Minor: controls.}
-\label{ch8:tab:course_requirements}
-\begin{tabular}{llll}
-Semester    & Class                                             & Req.       & Status    \\ \hline
-Fall 2019   & 16.413 Principles of Autonomy \& Decision Making  & major      & completed \\
-Fall 2019   & 6.255 Optimization Methods                        & major/math & completed \\
-Spring 2020 & 16.412 Cognitive Robotics                         & major      & completed \\
-Spring 2020 & 6.832 Underactuated Robotics                      & minor      & completed \\
-Fall 2020   & 18.385 Nonlinear Dynamics and Chaos               & minor/math & completed \\
-Fall 2020   & 2.160 Identification, Estimation, and Learning    & minor      & completed \\
-Spring 2021 & 16.S398 Formal Methods in Autonomy                & major      & completed \\
-Fall 2021   & 6.843: Robotic Manipulation                       & major      & completed \\
-Fall 2021   & 16.995 Doctoral Research \& Communication Seminar & RPC        & completed
-\end{tabular}
+    \centering
+    \caption{My completed coursework, satisfying all academic requirements for the doctoral program. Major: autonomy. Minor: controls.}
+    \label{ch8:tab:course_requirements}
+    \begin{tabular}{llll}
+        Semester    & Class                                             & Req.       & Status    \\ \hline
+        Fall 2019   & 16.413 Principles of Autonomy \& Decision Making  & major      & completed \\
+        Fall 2019   & 6.255 Optimization Methods                        & major/math & completed \\
+        Spring 2020 & 16.412 Cognitive Robotics                         & major      & completed \\
+        Spring 2020 & 6.832 Underactuated Robotics                      & minor      & completed \\
+        Fall 2020   & 18.385 Nonlinear Dynamics and Chaos               & minor/math & completed \\
+        Fall 2020   & 2.160 Identification, Estimation, and Learning    & minor      & completed \\
+        Spring 2021 & 16.S398 Formal Methods in Autonomy                & major      & completed \\
+        Fall 2021   & 6.843: Robotic Manipulation                       & major      & completed \\
+        Fall 2021   & 16.995 Doctoral Research \& Communication Seminar & RPC        & completed
+    \end{tabular}
 \end{table}
 
 \begin{table}[h]
-\centering
-\caption{Milestones towards my completion of the doctoral degree. Italicized milestones are anticipated.}
-\label{ch8:tab:degree_milestones}
-\begin{tabular}{rl}
-Fall 2019 (September)          & Began studies at MIT             \\
-Fall 2020 (December)           & Field evaluation complete        \\
-Spring 2021 (May)              & Masters thesis submitted         \\
-Fall 2022 (September)          & Committee meeting \#1   \\
-Summer 2023 (July)             & Commitee meeting \#2 and thesis proposal \\
-\textit{Fall 2023}             & \textit{Committee meeting \#3}   \\
-\textit{Spring 2024}           & \textit{Committee meeting \#4}   \\
-\textit{Spring 2024}           & \textit{Thesis defense}
-\end{tabular}
+    \centering
+    \caption{Milestones towards my completion of the doctoral degree. Italicized milestones are anticipated.}
+    \label{ch8:tab:degree_milestones}
+    \begin{tabular}{rl}
+        Fall 2019 (September)       & Began studies at MIT                           \\
+        Fall 2020 (December)        & Field evaluation complete                      \\
+        Spring 2021 (May)           & Masters thesis submitted                       \\
+        Fall 2022 (September)       & Committee meeting \#1                          \\
+        Summer 2023 (June)          & Commitee meeting \#2 and thesis proposal       \\
+        \textit{Fall 2023}          & \textit{Committee meeting \#3}                 \\
+        \textit{Spring 2024}        & \textit{Committee meeting \#4 and green light} \\
+        \textit{Spring/Summer 2024} & \textit{Thesis defense}
+    \end{tabular}
 \end{table}
 
 \subsection{Research Schedule}
 
 My thesis research will proceed in stages, as outlined below.
 
-Already completed:
-
 Spring 2022
 \begin{enumerate}
     \item Certifiable robot design optimization using differentiable programming
-    \begin{enumerate}
-        \item Develop design optimization tool using automatic differentiation
-        \item Develop statistical robustness certification tool based on extremal types theorem
-        \item Hardware deployment
-        \item Accepted to RSS 2022
-    \end{enumerate}
+          \begin{enumerate}
+              \item Develop design optimization tool using automatic differentiation
+              \item Develop statistical robustness certification tool based on extremal types theorem
+              \item Hardware deployment
+              \item Accepted to RSS 2022
+          \end{enumerate}
     \item Robust counterexample-guided optimization with temporal logic specifications
-    \begin{enumerate}
-        \item Define two-player zero-sum game between the designer and the verifier
-        \item Incorporate counterexamples from the verifier to guide robust design optimization
-        \item Use differentiable signal temporal logic for complex task specification
-        \item Submitted to IROS 2022
-    \end{enumerate}
+          \begin{enumerate}
+              \item Define two-player zero-sum game between the designer and the verifier
+              \item Incorporate counterexamples from the verifier to guide robust design optimization
+              \item Use differentiable signal temporal logic for complex task specification
+              \item Submitted to IROS 2022
+          \end{enumerate}
 \end{enumerate}
 
 Fall/Winter 2022
 \begin{enumerate}
     \item Improving design optimization and verification through automated failure mode discovery
-    \begin{enumerate}
-        \item Use differentiable programming and sequential MCMC to discover a diverse set of possible failure modes.
-        \item Use counterexamples from all failure modes to guide robust design optimization
-    \end{enumerate}
+          \begin{enumerate}
+              \item Use differentiable programming and sequential MCMC to discover a diverse set of possible failure modes.
+              \item Use counterexamples from all failure modes to guide robust design optimization
+          \end{enumerate}
 \end{enumerate}
 
-\textit{Spring 2023}
+Spring 2023
 \begin{enumerate}
     \item Extend failure mode prediction and mitigation framework to challenging new problem domains, including:
-    \begin{enumerate}
-        \item Perception-in-the-loop controllers, through the use of differentiable rendering,
-        \item Deep neural network controllers.
-    \end{enumerate}
+          \begin{enumerate}
+              \item Perception-in-the-loop controllers, through the use of differentiable rendering,
+              \item Deep neural network controllers.
+          \end{enumerate}
 \end{enumerate}
 
 \textit{Fall 2023}

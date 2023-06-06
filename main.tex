@@ -12,6 +12,7 @@
 % need to tranverse up to the root directory (../) then back to the appropriate files in /main
 \usepackage{preamble}
 \usepackage{mymacros}
+% \doublespacing
 
 % relative imports of images
 % note that graphics path should be encased in {}, ends with / to define directory, 
@@ -35,14 +36,14 @@
 %------------------
 % Table of Contents
 %------------------
-\tableofcontents 
+\tableofcontents
 % some thesis documents wil also want a table of contents for figures and tables
 % uncomment the commands below to create a table of contents for figures and tables
 %\listoffigures 
 %\listoftables
- 
+
 \newpage
- 
+
 % page numbering can be roman (e.g. i, ii, iii, iv), alpha (a, b, c, d)
 % or arabic (1,2,3,4). Change the below option to roman for front matter text
 % such as preface pages, alph for alpha lettering (e.g. Appendix maybe)
@@ -73,17 +74,17 @@
 % text, rather than sorting them alphabetically. For the \bibliography entries, much like the 
 % \graphicspath entries, each relative file directory is separated by a comma, no space,
 % followed by the .bib file name, without the .bib extension
-\bibliographystyle{unsrt} 
-\bibliography{bib_example}
+\bibliographystyle{apalike}
+\bibliography{main}
 % example: \bibliography{../bib/bib_example,../bib/bib_example2,../bib/bib_example3}
 
 
 % %---------------------------------------------------------------------------------------------%
 % % Appendix
 % %---------------------------------------------------------------------------------------------%
-% \newpage
-% \appendix
-% \input{appendix}
+\newpage
+\appendix
+\include{appendix_local_methods}
 
 %---------------------------------------------------------------------------%
 %								 End Document								%
