@@ -29,7 +29,7 @@ Of course, this is a deliberately narrow view of engineering design, since it fo
 
 \paragraph{Simulator} Given particular choices for $x$ and $y$, the system's state $s \in \mathcal{S}$ evolves in discrete time according to a known simulator $S : \cX \times \cY \mapsto \mathcal{S}^T$. This simulator describes the system's behavior over a finite horizon $T$ as a trace of states $s_1, \ldots, s_T$. We assume that $S$ is deterministic; randomness must be ``imported'' via the exogenous parameters.
 
-\paragraph{Cost} We assume access to a function $J: \mathcal{S}^T \mapsto \mathbb{R}$ mapping system behaviors (i.e. a trace of states) to a scalar performance metric that the designer seeks to minimize.
+\paragraph{Cost} We assume access to a function $J: \mathcal{S}^T \mapsto \mathbb{R}$ mapping system behaviors (i.e. a trace of states) to a scalar performance metric that the designer seeks to minimize. We assume that the composition $J(S(x, y))$ is automatically differentiable everywhere (we will relax this assumption in the next chapter).
 
 \ \\
 
